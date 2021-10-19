@@ -6,6 +6,6 @@ This is an early stage WIP program written in C++, in the future i'm planning to
 Current available option: Pythagorean theorem.
 ![immagine](https://user-images.githubusercontent.com/30447649/137995026-d7857d1d-5e28-4943-835e-1707bb7290e5.png)
 
-![immagine](https://user-images.githubusercontent.com/30447649/137997307-e489e1b1-5e02-4b01-a0f1-055e04ef7d87.png)
+![immagine](https://user-images.githubusercontent.com/30447649/137997403-a2cd60a7-3134-40c7-8824-482d83daca48.png)
 
 
