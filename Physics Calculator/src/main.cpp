@@ -7,6 +7,7 @@ int main() {
 	while (struc.choice == 0) {
 		menu::menu_init(struc, res);
 	}
+	system("pause");
 	
 	return 0;
 }
