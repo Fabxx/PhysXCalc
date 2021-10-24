@@ -9,6 +9,6 @@ This is an early stage WIP program written in C++, in the future i'm planning to
 Current available option: 
 Vector module calculation.
 Angle calculation between two vectors.
-![](Untitled.jpg) 
+![](logo.jpg) 
 
 
