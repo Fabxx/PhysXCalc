@@ -1,13 +1,14 @@
 #include <libs.h>
 
 int main() {
-
-	if (input::menu_init() == 1) {
-			power_sqr_root::powerenum1();
-			power_sqr_root::powerenum2();
-			power_sqr_root::square();
-		}		 
-	
+	while (input::choice == 0){
+		system("cls");
+	   input::menu_init();
+	   if (input::choice != 0){
+		   switcher::switchfunc();
+	   } 
+	}
+	 
 		system("pause");
 	
 		return 0;

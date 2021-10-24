@@ -3,8 +3,14 @@
 #include <iostream>
 using namespace std;
 #include <math.h>
-#include <Pythagorean_theorem.h>
+#include <vector>
+#include <Vector_module.h>
 #include <menu.h>
+#include <Angle_calc.h>
+#include <switcher.h>
+
+
+
 
 
 
