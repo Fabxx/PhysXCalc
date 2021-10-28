@@ -8,9 +8,9 @@ class single_module {
             static vett XYvett;
             static vett modules;
             static double_t XYcoord;
-            static void singlevettinput();
-            static void singlevettpower();
-            static void module_and_atan_single_vett();
+            static void coordinates_input();
+            static void module_calc();
+            static void module_output();
 
 };
 
