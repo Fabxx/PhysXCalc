@@ -9,7 +9,7 @@ using namespace std;
 #include <Single_Vector_module.h>
 #include <Vectorial_Scalar_Product.h>
 #include <menu.h>
-#include <Angle_calc.h>
+#include <Tetha_angle_calc.h>
 #include <switcher.h>
 #include <dump_memory.h>
 #include <delay.h>
