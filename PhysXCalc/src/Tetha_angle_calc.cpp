@@ -9,7 +9,7 @@ if we calculated the modules of 2 vectors, we'll calculate 2 atans.
 The first module is stored in the i position, the second module is stored in the
 i+1 position.
 the atan is calculated on the initial vector coordinates. 
- Y coordinate[i] / X coordinate[i+1] in vectors.*/
+ X coordinate[i] / Y coordinate[i+1] in vectors.*/
 void angle::atan_components() {
     
     for (size_t i = 0; i < modulefunc::XYvett.size()-1; i+=2) {
