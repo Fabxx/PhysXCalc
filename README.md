@@ -9,7 +9,7 @@ This is an early stage WIP program written in C++, in the future i'm planning to
 NOTE: In the future Wine will be required to run on Linux cause of the win32 GUI implementation. Unless i use ImGui with OpenGL
 
 Current available option: 
-Vector Operations all in one: Moudle, atan, tetha, scalar/vectorial product.
+Vector Operations all in one: Module, atan, tetha, scalar/vectorial product.
 
 ![](logo.png) 
 
