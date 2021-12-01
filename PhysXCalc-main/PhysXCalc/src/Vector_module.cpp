@@ -39,20 +39,12 @@ void modulefunc::coordinates_input() {
 
 
 //calculating module for each vector.
-//checking if the vector is not empty, doing it here to avoid conflict with first IF, since 0 is even.
-void modulefunc::module_calc() {
 
-    if (XYvett.size() == 0) {
-            cout << "No coordinates were found." << endl;
-                operation = true;
-        } else {
+void modulefunc::module_calc() {
              for (size_t i = 0; i < XYvett.size()-1; i+=2) { 
             modules.push_back(sqrt((XYvett[i] * XYvett[i]) + (XYvett[i+1] * XYvett[i+1])));
         }
     } 
-}   
-
-
 
 void modulefunc::module_output() {
 
