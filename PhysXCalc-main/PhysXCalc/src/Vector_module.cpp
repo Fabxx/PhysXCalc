@@ -23,7 +23,7 @@ void modulefunc::coordinates_input() {
             /*Size must be even and at least 4 to represent 2 vectors or else
             we can't calculate the tetha angle if we obtain only one atan with one vector.
             At least two atans must be there to calculate the tetha.*/
-            if ((XYcoord == 1 && XYvett.size()%2 == 0) && (XYvett.size() == 4)) {
+            if ((XYcoord == 1 && XYvett.size()%2 == 0) && (XYvett.size() >= 4)) {
                 i = XYvett.size();
             
             } else if ((XYcoord == 1 && XYvett.size()%2!= 0)) {
