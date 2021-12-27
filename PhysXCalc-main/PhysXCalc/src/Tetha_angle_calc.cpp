@@ -32,8 +32,10 @@ void angle::tetha_angle() {
            for (size_t i = 0; i < atanvett.size()-1; i+=2) {
                    if (atanvett[i] < atanvett[i+1]) {
                          tetha = atanvett[i+1] - atanvett[i];
+                       cout << "Angle between " << i << " And " << i+1 << "Vector: " << tetha << endl;
                    } else {
                          tetha = atanvett[i] - atanvett[i+1]; 
+                       cout << "Angle between " << i << " And " << i+1 << "Vector: " << tetha << endl;
                         } 
                 }
                 cout << "Angle between the vectors: " << tetha << endl;
