@@ -19,7 +19,7 @@ Vector Operations all in one: Module, atan, tetha, scalar/vectorial product.
 If you want to contribute to this project, you can simply fork this source, a makefile has been provided and tested on vs code, may work 
 on other IDE's as well. If you find any bugs please report them on the issue tracker. If you want to implement a feature, doa  pull request.
 
-# COPYRIGHT 2022 Prox-y.
+# Copyright 2022 Prox-y.
 
 ![](logo.png) 
 
