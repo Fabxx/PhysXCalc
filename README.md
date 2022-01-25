@@ -17,7 +17,7 @@ Vector Operations all in one: Module, atan, tetha, scalar/vectorial product.
 
 # Usage (Vs code)
 Install C/C++ Intellisense plugin from microsoft. 
-Open the project folder and compile it with ctrl+shift+b. THe makefile included will automatically delete the .o files. exe will be stored in output folder.
+Open the project folder and compile it with ctrl+shift+b. The makefile included will automatically delete the .o files. exe will be stored in output folder.
 
 
 # Contributions
