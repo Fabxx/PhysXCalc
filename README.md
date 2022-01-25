@@ -29,6 +29,6 @@ on other IDE's as well. If you find any bugs please report them on the issue tra
 
 # THIS PROGRAM IS PROVIDED AS IS AND IT MAY NOT WORK UNDER ALL THE SITUATIONS, THIS PROGRAM IS DISTRIBUTED UNDER GNU GENERAL PUBLIC LICENSE V3.
 
-![](logo.png) 
+![](asciilogo.png) 
 
 
