@@ -6,13 +6,19 @@
 This program aims to contain all the functions in physics to help in calculating values about vectors, force, gravity and much more.
 This is an early stage WIP program written in C++, in the future i'm planning to add graphical interface with graphics representation.
 
-NOTE: In the future Wine will be required to run on Linux cause of the win32 GUI implementation. Unless i use ImGui with OpenGL
-
 Current available option: 
 Vector Operations all in one: Module, atan, tetha, scalar/vectorial product.
 
-# USAGE
+# REQUIREMENTS
+  g++ compiler included in mingw-w64 for windows
+  in kali linux it's integrated
+  in ubuntu you must install it separately: ```sudo apt-get install g++
   
+
+# USAGE (Vs code)
+Install C/C++ Intellisense plugin from microsoft. 
+Open the project folder and compile it with ctrl+shift+b. THe makefile included will automatically delete the .o files. exe will be stored in output folder.
+
 
 # CONTRIBUTIONS
 
