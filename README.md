@@ -10,9 +10,9 @@ Current available option:
 Vector Operations all in one: Module, atan, tetha, scalar/vectorial product.
 
 # REQUIREMENTS
-  g++ compiler included in mingw-w64 for windows
-  in kali linux it's integrated
-  in ubuntu you must install it separately: ```sudo apt-get install g++```
+  -g++ compiler included in mingw-w64 for windows
+  -in kali linux it's integrated
+  -in ubuntu you must install it separately: ```sudo apt-get install g++```
   
 
 # USAGE (Vs code)
