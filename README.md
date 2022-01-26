@@ -24,9 +24,9 @@ install the CMake C/C++ Project generator: https://marketplace.visualstudio.com/
 Open the project folder and compile it with ctrl+shift+b (Release or debug). The makefile included will automatically detect the files.
 Since the build folder is already created, directly do:
 ```cd build <br />
-   make``` <br />
+   make <br />
    this will apply changes to the build everytime you edit the code.
-
+```
 -FROM TERMINAL:
 cd build <br />
 make <br />
