@@ -13,12 +13,17 @@ Vector Operations all in one: Module, atan, tetha, scalar/vectorial product.
 # Requirements
   -g++ compiler included in mingw-w64 for windows <br />
   -in kali linux it's integrated  <br />
-  -in ubuntu you must install it separately: ```sudo apt-get install g++```
+  -in ubuntu you must install it separately: ```sudo apt-get install g++``` <br />
+  -cmake
   
 
 # Usage (Vs code)
-Install C/C++ Intellisense plugin from microsoft. 
-Open the project folder and compile it with ctrl+shift+b. The makefile included will automatically delete the .o files. exe will be stored in output folder.
+Install C/C++ Intellisense plugin from microsoft.
+install the CMake C/C++ Project generator: https://marketplace.visualstudio.com/items?itemName=ChenPerach.c-cpp-cmake-project-creator
+Open the project folder and compile it with ctrl+shift+b (Release or debug). The makefile included will automatically detect the files.
+then ```cd build``` <br />
+```make`` <br />
+Executable will be stored in build folder.
 
 
 # Contributions
