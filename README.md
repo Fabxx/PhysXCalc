@@ -17,11 +17,13 @@ Vector Operations all in one: Module, atan, tetha, scalar/vectorial product.
   -cmake
   
 
-# Compiling (Vs code)
+# Compiling binaries
+# In vs code
 Install C/C++ Intellisense plugin from microsoft.
 install the CMake C/C++ Project generator: https://marketplace.visualstudio.com/items?itemName=ChenPerach.c-cpp-cmake-project-creator
 Open the project folder and compile it with ctrl+shift+b (Release or debug). The makefile included will automatically detect the files.
-then: <br />
+
+# From terminal
 ```cd build``` <br />
 ```make``` <br />
 Executable will be stored in build folder.
