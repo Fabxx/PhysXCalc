@@ -1,6 +1,6 @@
-#include <stdlibs.h>
-#include <Tetha_angle_calc.h>
-#include <Vector_module.h>
+#include "stdlibs.h"
+#include "Tetha_angle_calc.h"
+#include "Vector_module.h"
 double_t angle::tetha = 0;
 angle::vett angle::atanvett;  //recalling vett type since it's stored in class, linked with the vector itself
 

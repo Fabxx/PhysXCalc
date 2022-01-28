@@ -1,4 +1,4 @@
-#include <horizontal_rectilinear_motion.h>
+#include "horizontal_rectilinear_motion.h"
 
 double_t rectilinear_motion::speed, rectilinear_motion::time;
 

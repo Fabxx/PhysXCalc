@@ -1,10 +1,10 @@
-#include <stdlibs.h>
-#include <menu.h>
-#include <switcher.h>
-#include <Vector_module.h>
-#include <Tetha_angle_calc.h>
-#include <dump_memory.h>
-#include <Vectorial_Scalar_Product.h>
+#include "stdlibs.h"
+#include "menu.h"
+#include "switcher.h"
+#include "Vector_module.h"
+#include "Tetha_angle_calc.h"
+#include "dump_memory.h"
+#include "Vectorial_Scalar_Product.h"
 
 void switcher::switchfunc() {
 

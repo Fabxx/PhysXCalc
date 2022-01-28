@@ -1,6 +1,6 @@
 #ifndef F4D1F3C9_9761_4613_840F_DC06C9F6848C
 #define F4D1F3C9_9761_4613_840F_DC06C9F6848C
-#include <iostream>
+#include "stdlibs.h"
 #include <math.h>
 
 class vett_product {

@@ -54,16 +54,16 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fab/Scrivania/physxcalc
+CMAKE_SOURCE_DIR = /home/fab/Scrivania/PhysXCalc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fab/Scrivania/physxcalc/build
+CMAKE_BINARY_DIR = /home/fab/Scrivania/PhysXCalc/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/PhysxCalc.dir/all
+all: CMakeFiles/main.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/PhysxCalc.dir/clean
+clean: CMakeFiles/main.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/PhysxCalc.dir
+# Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
-CMakeFiles/PhysxCalc.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fab/Scrivania/physxcalc/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target PhysxCalc"
-.PHONY : CMakeFiles/PhysxCalc.dir/all
+CMakeFiles/main.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fab/Scrivania/PhysXCalc/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target main"
+.PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/PhysxCalc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fab/Scrivania/physxcalc/build/CMakeFiles 10
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/PhysxCalc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fab/Scrivania/physxcalc/build/CMakeFiles 0
-.PHONY : CMakeFiles/PhysxCalc.dir/rule
+CMakeFiles/main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fab/Scrivania/PhysXCalc/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fab/Scrivania/PhysXCalc/build/CMakeFiles 0
+.PHONY : CMakeFiles/main.dir/rule
 
 # Convenience name for target.
-PhysxCalc: CMakeFiles/PhysxCalc.dir/rule
-.PHONY : PhysxCalc
+main: CMakeFiles/main.dir/rule
+.PHONY : main
 
 # clean rule for target.
-CMakeFiles/PhysxCalc.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/clean
-.PHONY : CMakeFiles/PhysxCalc.dir/clean
+CMakeFiles/main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
+.PHONY : CMakeFiles/main.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

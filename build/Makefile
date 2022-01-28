@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fab/Scrivania/physxcalc
+CMAKE_SOURCE_DIR = /home/fab/Scrivania/PhysXCalc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fab/Scrivania/physxcalc/build
+CMAKE_BINARY_DIR = /home/fab/Scrivania/PhysXCalc/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fab/Scrivania/physxcalc/build/CMakeFiles /home/fab/Scrivania/physxcalc/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fab/Scrivania/PhysXCalc/build/CMakeFiles /home/fab/Scrivania/PhysXCalc/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fab/Scrivania/physxcalc/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fab/Scrivania/PhysXCalc/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named PhysxCalc
+# Target rules for targets named main
 
 # Build rule for target.
-PhysxCalc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PhysxCalc
-.PHONY : PhysxCalc
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-PhysxCalc/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/build
-.PHONY : PhysxCalc/fast
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
 src/Tetha_angle_calc.o: src/Tetha_angle_calc.cpp.o
 .PHONY : src/Tetha_angle_calc.o
 
 # target to build an object file
 src/Tetha_angle_calc.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/Tetha_angle_calc.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Tetha_angle_calc.cpp.o
 .PHONY : src/Tetha_angle_calc.cpp.o
 
 src/Tetha_angle_calc.i: src/Tetha_angle_calc.cpp.i
@@ -142,7 +142,7 @@ src/Tetha_angle_calc.i: src/Tetha_angle_calc.cpp.i
 
 # target to preprocess a source file
 src/Tetha_angle_calc.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/Tetha_angle_calc.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Tetha_angle_calc.cpp.i
 .PHONY : src/Tetha_angle_calc.cpp.i
 
 src/Tetha_angle_calc.s: src/Tetha_angle_calc.cpp.s
@@ -150,7 +150,7 @@ src/Tetha_angle_calc.s: src/Tetha_angle_calc.cpp.s
 
 # target to generate assembly for a file
 src/Tetha_angle_calc.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/Tetha_angle_calc.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Tetha_angle_calc.cpp.s
 .PHONY : src/Tetha_angle_calc.cpp.s
 
 src/Vector_module.o: src/Vector_module.cpp.o
@@ -158,7 +158,7 @@ src/Vector_module.o: src/Vector_module.cpp.o
 
 # target to build an object file
 src/Vector_module.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/Vector_module.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Vector_module.cpp.o
 .PHONY : src/Vector_module.cpp.o
 
 src/Vector_module.i: src/Vector_module.cpp.i
@@ -166,7 +166,7 @@ src/Vector_module.i: src/Vector_module.cpp.i
 
 # target to preprocess a source file
 src/Vector_module.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/Vector_module.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Vector_module.cpp.i
 .PHONY : src/Vector_module.cpp.i
 
 src/Vector_module.s: src/Vector_module.cpp.s
@@ -174,7 +174,7 @@ src/Vector_module.s: src/Vector_module.cpp.s
 
 # target to generate assembly for a file
 src/Vector_module.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/Vector_module.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Vector_module.cpp.s
 .PHONY : src/Vector_module.cpp.s
 
 src/Vectorial_Scalar_Product.o: src/Vectorial_Scalar_Product.cpp.o
@@ -182,7 +182,7 @@ src/Vectorial_Scalar_Product.o: src/Vectorial_Scalar_Product.cpp.o
 
 # target to build an object file
 src/Vectorial_Scalar_Product.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/Vectorial_Scalar_Product.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Vectorial_Scalar_Product.cpp.o
 .PHONY : src/Vectorial_Scalar_Product.cpp.o
 
 src/Vectorial_Scalar_Product.i: src/Vectorial_Scalar_Product.cpp.i
@@ -190,7 +190,7 @@ src/Vectorial_Scalar_Product.i: src/Vectorial_Scalar_Product.cpp.i
 
 # target to preprocess a source file
 src/Vectorial_Scalar_Product.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/Vectorial_Scalar_Product.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Vectorial_Scalar_Product.cpp.i
 .PHONY : src/Vectorial_Scalar_Product.cpp.i
 
 src/Vectorial_Scalar_Product.s: src/Vectorial_Scalar_Product.cpp.s
@@ -198,7 +198,7 @@ src/Vectorial_Scalar_Product.s: src/Vectorial_Scalar_Product.cpp.s
 
 # target to generate assembly for a file
 src/Vectorial_Scalar_Product.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/Vectorial_Scalar_Product.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Vectorial_Scalar_Product.cpp.s
 .PHONY : src/Vectorial_Scalar_Product.cpp.s
 
 src/delay.o: src/delay.cpp.o
@@ -206,7 +206,7 @@ src/delay.o: src/delay.cpp.o
 
 # target to build an object file
 src/delay.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/delay.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/delay.cpp.o
 .PHONY : src/delay.cpp.o
 
 src/delay.i: src/delay.cpp.i
@@ -214,7 +214,7 @@ src/delay.i: src/delay.cpp.i
 
 # target to preprocess a source file
 src/delay.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/delay.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/delay.cpp.i
 .PHONY : src/delay.cpp.i
 
 src/delay.s: src/delay.cpp.s
@@ -222,7 +222,7 @@ src/delay.s: src/delay.cpp.s
 
 # target to generate assembly for a file
 src/delay.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/delay.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/delay.cpp.s
 .PHONY : src/delay.cpp.s
 
 src/dump_memory.o: src/dump_memory.cpp.o
@@ -230,7 +230,7 @@ src/dump_memory.o: src/dump_memory.cpp.o
 
 # target to build an object file
 src/dump_memory.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/dump_memory.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dump_memory.cpp.o
 .PHONY : src/dump_memory.cpp.o
 
 src/dump_memory.i: src/dump_memory.cpp.i
@@ -238,7 +238,7 @@ src/dump_memory.i: src/dump_memory.cpp.i
 
 # target to preprocess a source file
 src/dump_memory.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/dump_memory.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dump_memory.cpp.i
 .PHONY : src/dump_memory.cpp.i
 
 src/dump_memory.s: src/dump_memory.cpp.s
@@ -246,7 +246,7 @@ src/dump_memory.s: src/dump_memory.cpp.s
 
 # target to generate assembly for a file
 src/dump_memory.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/dump_memory.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/dump_memory.cpp.s
 .PHONY : src/dump_memory.cpp.s
 
 src/horizontal_rectilinear_motion.o: src/horizontal_rectilinear_motion.cpp.o
@@ -254,7 +254,7 @@ src/horizontal_rectilinear_motion.o: src/horizontal_rectilinear_motion.cpp.o
 
 # target to build an object file
 src/horizontal_rectilinear_motion.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/horizontal_rectilinear_motion.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/horizontal_rectilinear_motion.cpp.o
 .PHONY : src/horizontal_rectilinear_motion.cpp.o
 
 src/horizontal_rectilinear_motion.i: src/horizontal_rectilinear_motion.cpp.i
@@ -262,7 +262,7 @@ src/horizontal_rectilinear_motion.i: src/horizontal_rectilinear_motion.cpp.i
 
 # target to preprocess a source file
 src/horizontal_rectilinear_motion.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/horizontal_rectilinear_motion.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/horizontal_rectilinear_motion.cpp.i
 .PHONY : src/horizontal_rectilinear_motion.cpp.i
 
 src/horizontal_rectilinear_motion.s: src/horizontal_rectilinear_motion.cpp.s
@@ -270,7 +270,7 @@ src/horizontal_rectilinear_motion.s: src/horizontal_rectilinear_motion.cpp.s
 
 # target to generate assembly for a file
 src/horizontal_rectilinear_motion.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/horizontal_rectilinear_motion.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/horizontal_rectilinear_motion.cpp.s
 .PHONY : src/horizontal_rectilinear_motion.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -278,7 +278,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -286,7 +286,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -294,7 +294,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/menu.o: src/menu.cpp.o
@@ -302,7 +302,7 @@ src/menu.o: src/menu.cpp.o
 
 # target to build an object file
 src/menu.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/menu.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/menu.cpp.o
 .PHONY : src/menu.cpp.o
 
 src/menu.i: src/menu.cpp.i
@@ -310,7 +310,7 @@ src/menu.i: src/menu.cpp.i
 
 # target to preprocess a source file
 src/menu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/menu.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/menu.cpp.i
 .PHONY : src/menu.cpp.i
 
 src/menu.s: src/menu.cpp.s
@@ -318,7 +318,7 @@ src/menu.s: src/menu.cpp.s
 
 # target to generate assembly for a file
 src/menu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/menu.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/menu.cpp.s
 .PHONY : src/menu.cpp.s
 
 src/switcher.o: src/switcher.cpp.o
@@ -326,7 +326,7 @@ src/switcher.o: src/switcher.cpp.o
 
 # target to build an object file
 src/switcher.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/switcher.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/switcher.cpp.o
 .PHONY : src/switcher.cpp.o
 
 src/switcher.i: src/switcher.cpp.i
@@ -334,7 +334,7 @@ src/switcher.i: src/switcher.cpp.i
 
 # target to preprocess a source file
 src/switcher.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/switcher.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/switcher.cpp.i
 .PHONY : src/switcher.cpp.i
 
 src/switcher.s: src/switcher.cpp.s
@@ -342,7 +342,7 @@ src/switcher.s: src/switcher.cpp.s
 
 # target to generate assembly for a file
 src/switcher.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysxCalc.dir/build.make CMakeFiles/PhysxCalc.dir/src/switcher.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/switcher.cpp.s
 .PHONY : src/switcher.cpp.s
 
 # Help Target
@@ -353,7 +353,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... PhysxCalc"
+	@echo "... main"
 	@echo "... src/Tetha_angle_calc.o"
 	@echo "... src/Tetha_angle_calc.i"
 	@echo "... src/Tetha_angle_calc.s"

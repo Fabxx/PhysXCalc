@@ -16,9 +16,9 @@
  * 
  */
 
-#include <stdlibs.h>
-#include <menu.h>
-#include <switcher.h>
+#include "stdlibs.h"
+#include "menu.h"
+#include "switcher.h"
 
 
 int main(int argc, char **argv) {

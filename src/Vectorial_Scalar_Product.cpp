@@ -3,10 +3,10 @@
         Then it obtains the angle calculated from Angle calculation between two vectors.
         This is useful to not repeat the input every single time.*/
 
-#include <stdlibs.h>
-#include <Vectorial_Scalar_Product.h>
-#include <Vector_module.h>
-#include <Tetha_angle_calc.h>
+#include "stdlibs.h"
+#include "Vectorial_Scalar_Product.h"
+#include "Vector_module.h"
+#include "Tetha_angle_calc.h"
 
 double_t vett_product::product_store, vett_product::vector_product, vett_product::cosangle, vett_product::sinangle, 
 vett_product::scalar_product;

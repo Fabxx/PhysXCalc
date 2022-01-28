@@ -1,7 +1,7 @@
 //Display messages.
 
-#include <stdlibs.h>
-#include <menu.h>
+#include "stdlibs.h"
+#include "menu.h"
 
 int16_t graphics::choice; 
 

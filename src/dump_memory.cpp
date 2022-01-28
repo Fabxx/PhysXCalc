@@ -1,8 +1,8 @@
 //This functions frees all the allocated memory for the vectors to work with new values.
-#include <dump_memory.h>
-#include <delay.h>
-#include <Tetha_angle_calc.h>
-#include <Vector_module.h>
+#include "dump_memory.h"
+#include "delay.h"
+#include "Tetha_angle_calc.h"
+#include "Vector_module.h"
 
 void memory::dump() {
 
