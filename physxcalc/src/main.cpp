@@ -30,8 +30,3 @@ int main() {
 		return 0;
 	
 }
-
-
-
-//TODO moto uniforme/accelerato
-//TODO rielaborare menu con categorie delle funzioni (eg VETTORI, MOTI, ecc).
