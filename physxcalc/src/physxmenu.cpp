@@ -19,6 +19,14 @@ void graphics::menu_init() {
         cin >> choice;
 }
 
+void graphics::input_menu() {
+    
+     cout << "Insert Vector coordinates, each 2 coordinates are a single vector" << endl
+         << "Insert 1 to exit" << endl
+         << "\033[0;31mNote: at least 4 coordinates must be inserted to proceed in the tetha calculation" << endl 
+         <<  "\033[0;37mfor more information see the comments in the Vector_module.cpp file." << endl;
+}
+
 void memory::dump() {
 
         cout << "Dumping memory of vectors for new values" << endl;
