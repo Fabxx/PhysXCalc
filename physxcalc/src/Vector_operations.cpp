@@ -1,9 +1,8 @@
 #include "Vector_operations.h"
 using namespace std;
 
-vector<double_t> modulefunc::modules, modulefunc::XYvett;
-bool modulefunc::operation;
-vector<double_t> angle::atanvett;  
+vector<double_t> modulefunc::modules, modulefunc::XYvett, angle::atanvett; 
+bool modulefunc::operation; 
 double_t angle::tetha = 0, modulefunc::XYcoord, vett_product::cosangle, vett_product::sinangle, vett_product::scalar_product, vett_product::product_store, 
 vett_product::vector_product;
 
