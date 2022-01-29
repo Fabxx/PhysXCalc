@@ -12,8 +12,8 @@ Vector module section
 size+1 so 0 < 1 is true and we start the input.
 in this case we have to tell him when we want to stop
 if we choose to exit and there are at least even numbers of coords >= 4
-in all other cases, if it's empty or odd, we return to menu.
-This protection avoids segmentation fault by aborting next calculations.
+we can proceed. In all other cases, if it's empty or odd we return to menu.
+This protection avoids segmentation fault by aborting next calculations,
 we can't calculate the tetha angle if we obtain only one atan with one vector.
 At least two atans must be there to calculate the tetha.
 */
