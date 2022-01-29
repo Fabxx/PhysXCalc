@@ -20,11 +20,6 @@ At least two atans must be there to calculate the tetha.
 
 void modulefunc::coordinates_input() {
   
-    cout << "Insert Vector coordinates, each 2 coordinates are a single vector" << endl
-         << "Insert 1 to exit" << endl
-         << "\033[0;31mNote: at least 4 coordinates must be inserted to proceed in the tetha calculation" << endl 
-         <<  "\033[0;37mfor more information see the comments in the Vector_module.cpp file." << endl;
-    
     for (size_t i = 0; i < XYvett.size()+1; i++){    
             cin >> XYcoord;
             if ((XYcoord == 1 && XYvett.size()%2 == 0) && (XYvett.size() >= 4)) {
