@@ -9,6 +9,13 @@ vett_product::vector_product;
 /*###############################
 Vector module section
   ###############################
+size+1 so 0 < 1 is true and we start the input.
+in this case we have to tell him when we want to stop
+if we choose to exit and there are at least even numbers of coords >= 4
+in all other cases, if it's empty or odd, we return to menu.
+This protection avoids segmentation fault by aborting next calculations.
+we can't calculate the tetha angle if we obtain only one atan with one vector.
+At least two atans must be there to calculate the tetha.
 */
 
 void modulefunc::coordinates_input() {
@@ -17,14 +24,6 @@ void modulefunc::coordinates_input() {
          << "Insert 1 to exit" << endl
          << "\033[0;31mNote: at least 4 coordinates must be inserted to proceed in the tetha calculation" << endl 
          <<  "\033[0;37mfor more information see the comments in the Vector_module.cpp file." << endl;
-    
-    /*size+1 so 0 < 1 is true and we start the input.
-    in this case we have to tell him when we want to stop
-    if we choose to exit and there are at least even numbers of coords >= 4
-    in all other cases, if it's empty or odd, we return to menu.
-    This protection avoids segmentation fault by aborting next calculations.
-    we can't calculate the tetha angle if we obtain only one atan with one vector.
-    At least two atans must be there to calculate the tetha.*/
     
     for (size_t i = 0; i < XYvett.size()+1; i++){    
             cin >> XYcoord;
@@ -75,11 +74,10 @@ void angle::atan_calculation() {
 }       
 
 /*we store the tetha result Obtained with all the vectors. it will be ONE tetha angle covering
-all the vectors putted. */
+all the vectors putted. We also change the value order if it's lower, to not get a negative value. */
 
 void angle::tetha_angle() { 
-    
-            //change the order to not get negative value. 
+  
            for (size_t i = 0; i < atanvett.size()-1; i+=2) {
                    if (atanvett[i] < atanvett[i+1]) {
                          tetha = atanvett[i+1] - atanvett[i];
@@ -103,18 +101,18 @@ void vett_product::muliply_modules() {
                 product_store = (modulefunc::modules[i] * modulefunc::modules[i+1]);                      
         }
                  cout << "Product of modules: " << product_store << endl;
-}   //multiplying all the module of vectors, printing out the total module.
+}  
                 
 void vett_product::cos_of_angle() {
             cosangle =  cos(angle::tetha);
             cout << "COS angle: " << cosangle << endl;;
-        }   //calculating the sin of tetha angle obtained from all the vectors.
+        }   
 
 
 void vett_product::sin_of_angle() {
             sinangle =  sin(angle::tetha);
             cout << "SIN Angle: " << sinangle << endl;
-        }   //calculating the cos of tetha angle obtained from all the vectors.
+        }   
 
 
 void vett_product::vectorial_product() {
