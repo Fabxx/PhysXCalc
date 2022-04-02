@@ -8,41 +8,40 @@ using namespace std;
 class modulefunc {
         
     public:
-            static vector<double_t> XYvett;
-            static vector<double_t> modules;
-            static double_t XYcoord;
-            static bool operation;
-            static void coordinates_input();
-            static void module_calc();
-            static void module_output();
+             vector<double_t> XYvett;
+             vector<double_t> modules;
+             double_t XYcoord;
+             bool operation;
+             void coordinates_input();
+             void module_calc();
+             void module_output();
 
 };
 
 class vett_product {
     private:
-            static double_t vector_product;
-            static double_t scalar_product;
+             double_t vector_product;
+             double_t scalar_product;
     public:
-                static double_t product_store;
-                static double_t sinangle;
-                static double_t cosangle;
+                 double_t product_store;
+                 double_t sinangle;
+                 double_t cosangle;
                 
 
-            static void muliply_modules();
-            static void cos_of_angle();
-            static void vectorial_product();
-            static void vectorial_scalar();
-            static void sin_of_angle();
+             void muliply_modules();
+             void cos_of_angle();
+             void vectorial_product();
+             void vectorial_scalar();
+             void sin_of_angle();
 };
 
 class angle { 
         
     public:
-             static double_t tetha;
-             static vector<double_t> atanvett;
-             static void atan_calculation();
-             static void tetha_angle();
-
+              double_t tetha;
+              vector<double_t> atanvett;
+              void atan_calculation();
+              void tetha_angle();
 };
 
 

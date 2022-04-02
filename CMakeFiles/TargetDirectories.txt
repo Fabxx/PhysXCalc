@@ -1,0 +1,3 @@
+/home/fab/Scrivania/PhysXCalc/CMakeFiles/main.dir
+/home/fab/Scrivania/PhysXCalc/CMakeFiles/edit_cache.dir
+/home/fab/Scrivania/PhysXCalc/CMakeFiles/rebuild_cache.dir
