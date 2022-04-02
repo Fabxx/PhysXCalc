@@ -1,6 +1,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg)
 [![Windows](https://svgshare.com/i/ZhY.svg)](https://svgshare.com/i/ZhY.svg)
+[![CMake](https://github.com/revix-0/PhysXCalc/actions/workflows/cmake.yml/badge.svg?branch=main)](https://github.com/revix-0/PhysXCalc/actions/workflows/cmake.yml)
 
 # PhysXCalc: physics calculator
 
