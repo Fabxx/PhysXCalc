@@ -4,7 +4,7 @@ project(main)
 #checking for min version of cmake
 cmake_minimum_required(VERSION 3.10)
 
-#including library directories, from extra packages too.
+#including library directories.
 include_directories(include)
 
 #adding source .cpp files directory
