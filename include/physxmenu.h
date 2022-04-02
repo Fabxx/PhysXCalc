@@ -5,21 +5,21 @@
 
 class graphics {
     public:
-        static int16_t choice;
+         int16_t choice;
         
-        static void interface();
-        static void input_menu();
+         void interface();
+         void input_menu();
 };
 
 class switcher {
     public:
-            static void switchfunc();
+         void switchfunc();
 };
 
 class memory {
 
     public:
-            static void dump();
+             void dump();
 };
 
 #endif /* D1E50C8C_2EB2_44D3_BB47_162D340D6639 */
