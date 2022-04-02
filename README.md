@@ -15,10 +15,15 @@ Vector Operations all in one: Module, atan, tetha, scalar/vectorial product.
   -g++ compiler included in mingw-w64 for windows <br />
   -in kali linux it's integrated  <br />
   -in ubuntu you must install it separately: ```sudo apt-get install g++``` <br />
+  -In Manjaro install ```sudo pacman -S base-devel``` package. <br />
+  -Cmake:
+  Manjaro: ```sudo pacman -S cmake```
+  Ubuntu: ```sudo apt-get install cmake```
+  On windows get it from the site.
   
 
 # Compiling binaries
-Open project in your IDE and use the provided makefile.
+Inside the cloned repo simply run ```cmake .``` then ```make```.
 
 
 # Contributions
