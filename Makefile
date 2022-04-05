@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fab/Scrivania/PhysXCalc
+CMAKE_SOURCE_DIR = /home/fab/Scrivania/main
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fab/Scrivania/PhysXCalc
+CMAKE_BINARY_DIR = /home/fab/Scrivania/main
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fab/Scrivania/PhysXCalc/CMakeFiles /home/fab/Scrivania/PhysXCalc//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fab/Scrivania/main/CMakeFiles /home/fab/Scrivania/main//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fab/Scrivania/PhysXCalc/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fab/Scrivania/main/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -153,6 +153,30 @@ src/Vector_operations.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Vector_operations.cpp.s
 .PHONY : src/Vector_operations.cpp.s
 
+src/graphics.o: src/graphics.cpp.o
+.PHONY : src/graphics.o
+
+# target to build an object file
+src/graphics.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/graphics.cpp.o
+.PHONY : src/graphics.cpp.o
+
+src/graphics.i: src/graphics.cpp.i
+.PHONY : src/graphics.i
+
+# target to preprocess a source file
+src/graphics.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/graphics.cpp.i
+.PHONY : src/graphics.cpp.i
+
+src/graphics.s: src/graphics.cpp.s
+.PHONY : src/graphics.s
+
+# target to generate assembly for a file
+src/graphics.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/graphics.cpp.s
+.PHONY : src/graphics.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -177,30 +201,6 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/physxmenu.o: src/physxmenu.cpp.o
-.PHONY : src/physxmenu.o
-
-# target to build an object file
-src/physxmenu.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/physxmenu.cpp.o
-.PHONY : src/physxmenu.cpp.o
-
-src/physxmenu.i: src/physxmenu.cpp.i
-.PHONY : src/physxmenu.i
-
-# target to preprocess a source file
-src/physxmenu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/physxmenu.cpp.i
-.PHONY : src/physxmenu.cpp.i
-
-src/physxmenu.s: src/physxmenu.cpp.s
-.PHONY : src/physxmenu.s
-
-# target to generate assembly for a file
-src/physxmenu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/physxmenu.cpp.s
-.PHONY : src/physxmenu.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -213,12 +213,12 @@ help:
 	@echo "... src/Vector_operations.o"
 	@echo "... src/Vector_operations.i"
 	@echo "... src/Vector_operations.s"
+	@echo "... src/graphics.o"
+	@echo "... src/graphics.i"
+	@echo "... src/graphics.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/physxmenu.o"
-	@echo "... src/physxmenu.i"
-	@echo "... src/physxmenu.s"
 .PHONY : help
 
 
