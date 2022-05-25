@@ -16,19 +16,21 @@
  * 
  */
 
-#include "Vector_operations.h"
-#include "graphics.h"
+#include "Vector_operations.hh"
+#include "graphics.hh"
 
-int main() {
-
-		graphics graph; switcher swi; modulefunc modul; memory mem; angle ang; vett_product vett;
+int main() 
+{
+	graphics graph; switcher swi; modulefunc modul; memory mem; angle ang; vett_product vett;
 	
-	while (graph.choice <= 0 || graph.choice > 3){
+	while (graph.choice <= 0 || graph.choice > 3)
+	{
 	   graph.interface();
-	   if (graph.choice != 0){
-		   swi.switchfunc(graph, modul, mem, ang, vett);
+
+	   if (graph.choice != 0)
+	   {
+		swi.switchfunc(graph, modul, mem, ang, vett);
 	   } 
 	}
 		return 0;
-	
 }
