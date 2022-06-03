@@ -4,7 +4,6 @@
 using namespace std;
 #include <math.h>
 #include <vector>
-#include "graphics.hh"
 
 class modulefunc {
         
@@ -12,11 +11,10 @@ class modulefunc {
              vector<double_t> XYvett;
              vector<double_t> modules;
              double_t XYcoord;
-             bool operation;
-             void coordinates_input(graphics graph);
+             bool operation = false;
+             
+             bool coordinates_input();
              void module_calc();
-             void module_output();
-
 };
 
 class angle { 
@@ -56,7 +54,7 @@ class memory {
 //switches menu options based on user choice
 class switcher {
     public:
-         void switchfunc(graphics graph, modulefunc modul, memory mem, angle ang, vett_product vett);
+         void switchfunc(modulefunc modul, memory mem, angle ang, vett_product vett);
 };
 
 

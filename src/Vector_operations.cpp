@@ -1,39 +1,6 @@
 #include "Vector_operations.hh"
 using namespace std;
 
-/*###############################
-Vector module section
-  ###############################
-size+1 so 0 < 1 is true and we start the input.
-in this case we have to tell him when we want to stop
-if we choose to exit and there are at least even numbers of coords >= 4
-we can proceed. In all other cases, if it's empty or odd we return to menu.
-This protection avoids segmentation fault by aborting next calculations,
-we can't calculate the tetha angle if we obtain only one atan with one vector.
-At least two atans must be there to calculate the tetha.
-*/
-
-void modulefunc::coordinates_input(graphics graph) 
-{
-    graph.input_menu();
-    
-    for (size_t i = 0; i < XYvett.size()+1; i++)
-    {    
-        cin >> XYcoord;
-        if ((XYcoord == 1 && XYvett.size()%2 == 0) && (XYvett.size() >= 4)) 
-        {
-            i = XYvett.size();
-        } else if ((XYcoord == 1 && XYvett.size()%2!= 0)) 
-        {
-            cout << "\033[0;31mAt least even numbers of coordinates must be inserted." << endl;
-            operation = true;
-        } else 
-        {
-            XYvett.push_back(XYcoord);   
-        }    
-    }   
-}
-
 void modulefunc::module_calc() 
 {
     for (size_t i = 0; i < XYvett.size()-1; i+=2) 
@@ -42,15 +9,6 @@ void modulefunc::module_calc()
     }
 } 
 
-
-void modulefunc::module_output() 
-{
-    for (size_t i = 0; i < modules.size(); ++i)
-    {
-        cout << "Module of " << i+1 << " vector";
-        cout << " " << modules[i] << endl;
-    }      
-} 
 
 /*###############################
 Vector atan section
