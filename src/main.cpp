@@ -40,7 +40,7 @@ static void glfw_error_callback(int error, const char* description)
     fprintf(stderr, "Glfw Error %d: %s\n", error, description);
 }
 
-int main(int, char**)
+int main(void)
 {
     modulefunc func; angle atan;
     // Setup window
@@ -112,7 +112,7 @@ int main(int, char**)
         ImGui::NewFrame();
 
         //Draw the window in frames only when the button is clicked.
-        if(ImGui::IsItemClicked(ImGui::Button("Vector operations")))
+        if (ImGui::IsItemClicked(ImGui::Button("Vector operations")))
         {
             show_operation_box = !show_operation_box;
         }
@@ -121,7 +121,7 @@ int main(int, char**)
             system_info = !system_info;
         }
 
-        if(show_operation_box)
+        if (show_operation_box)
         {
           //window name + text + input for numbers.
           ImGui::Begin("Coordinates input, insert at least a even number of coords");  
@@ -134,16 +134,10 @@ int main(int, char**)
 
           ImGui::End();
         }
-
+        //System information
         if (system_info)
         {
-            ImGui::Begin("System Information");
-            ImGui::TextWrapped(get_cpu_info());
-            ImGui::NextColumn();
-            ImGui::TextWrapped(reinterpret_cast<const char *>(glGetString(GL_VENDOR)));
-            ImGui::NextColumn();
-            ImGui::TextWrapped(reinterpret_cast<const char *>(glGetString(GL_RENDERER)));
-            ImGui::End();
+            draw_sys_info();
         }
 
         //Check if the vector has the necessary numbers of elements when the button is clicked to proceed the calculation.
