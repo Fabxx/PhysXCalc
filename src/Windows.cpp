@@ -1,13 +1,10 @@
 #include <iostream>
 #include "../imgui/imgui.h"
-#include "Buttons.hh"
 #include "Windows.hh"
-#include "Vector_operations.hh"
 
 /*Vector window with it's buttons inside, the checks on the buttons will be done on the same window*/
-void Windows::vector_operations_window()
+void Windows::vector_operations_window(MainWindowButtons button, ButtonStatus status)
 {
-    MainWindowButtons button; ButtonStatus status;
     //window name + text + input for numbers.
     ImGui::Begin("Coordinates input, insert at least a even number of coords");  
     ImGui::InputDouble("input", &XYcoord, 0.0, 0.0, "%f", 0);

@@ -118,7 +118,7 @@ int main(void)
 
         if (status.show_input_box)
         {
-            window_manager.vector_operations_window();
+            window_manager.vector_operations_window(button, status);
         }
 
         //Display error text if coordinate boundaries are not respected.
