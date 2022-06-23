@@ -1,15 +1,14 @@
 #ifndef E9AEFDD1_00F8_4C11_84C5_C1D6EB27AC5E
 #define E9AEFDD1_00F8_4C11_84C5_C1D6EB27AC5E
 #include <iostream>
-using namespace std;
 #include <math.h>
 #include <vector>
 
 class modulefunc {
         
     public:
-             vector<double_t> XYvett;
-             vector<double_t> modules;
+             std::vector<double_t> XYvett;
+             std::vector<double_t> module_store;
              double_t XYcoord;
              bool operation = false;
              
@@ -17,49 +16,28 @@ class modulefunc {
              void module_calc();
 };
 
-class angle { 
+class angle : public modulefunc { 
         
     public:
               double_t tetha;
-              vector<double_t> atanvett;
-              void atan_calculation(modulefunc modul);
+              double_t product_store;
+              std::vector<double_t> atanvett;
+              void atan_calculation();
               void tetha_angle();
+              void muliply_modules();
 };
 
-class vett_product {
+class vett_product : public angle {
     private:
              double_t vector_product;
              double_t scalar_product;
     public:
-                 double_t product_store;
                  double_t sinangle;
                  double_t cosangle;
                 
-
-             void muliply_modules(modulefunc modul);
-             void cos_of_angle(angle ang);
+             void cos_of_angle();
              void vectorial_product();
              void vectorial_scalar();
-             void sin_of_angle(angle ang);
+             void sin_of_angle();
 };
-
-
-//cleans vectors
-class memory {
-
-    public:
-             void dump(angle ang, modulefunc modul);
-};
-
-//switches menu options based on user choice
-class switcher {
-    public:
-         void switchfunc(modulefunc modul, memory mem, angle ang, vett_product vett);
-};
-
-
-
-
-
-
 #endif /* E9AEFDD1_00F8_4C11_84C5_C1D6EB27AC5E */

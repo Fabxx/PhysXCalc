@@ -24,7 +24,8 @@
 #include <stdio.h>
 #include <iostream>
 #include "Vector_operations.hh"
-#include "system_info.hh"
+#include "Buttons.hh"
+#include "Windows.hh"
 
 #if defined(IMGUI_IMPL_OPENGL_ES2)
 #include <GLES2/gl2.h>
@@ -42,7 +43,7 @@ static void glfw_error_callback(int error, const char* description)
 
 int main(void)
 {
-    modulefunc func; angle atan;
+    modulefunc func; angle atan; MainWindowButtons button; Windows window_manager; ButtonStatus status;
     // Setup window
     glfwSetErrorCallback(glfw_error_callback);
     if (!glfwInit())
@@ -97,10 +98,6 @@ int main(void)
     // Our state
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
-    bool show_operation_box = false;
-    bool error = false;
-    bool system_info = false;
-
     // Main loop
     while (!glfwWindowShouldClose(window))
     {
@@ -111,66 +108,37 @@ int main(void)
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
+        button.Vector_operations_button = ImGui::Button("Vector Operations");
+
         //Draw the window in frames only when the button is clicked.
-        if (ImGui::IsItemClicked(ImGui::Button("Vector operations")))
+        if (ImGui::IsItemClicked(button.Vector_operations_button))
         {
-            show_operation_box = !show_operation_box;
-        }
-        if (ImGui::IsItemClicked(ImGui::Button("System Information")))
-        {
-            system_info = !system_info;
+            status.show_input_box = !status.show_input_box;
         }
 
-        if (show_operation_box)
+        if (status.show_input_box)
         {
-          //window name + text + input for numbers.
-          ImGui::Begin("Coordinates input, insert at least a even number of coords");  
-          ImGui::InputDouble("input", &func.XYcoord, 0.0, 0.0, "%f", 0);    
-     
-          if (ImGui::IsKeyPressed(ImGuiKey_Enter))
-          {
-              func.XYvett.push_back(func.XYcoord); 
-          }
-
-          ImGui::End();
-        }
-        //System information
-        if (system_info)
-        {
-            draw_sys_info();
-        }
-
-        //Check if the vector has the necessary numbers of elements when the button is clicked to proceed the calculation.
-
-        if ((ImGui::IsItemClicked(ImGui::Button("End input"))) 
-        && ((func.XYvett.size() == 0) || ((func.XYvett.size()%2 != 0) && (func.XYvett.size() < 4))))
-        {
-            error = !error;
+            window_manager.vector_operations_window();
         }
 
         //Display error text if coordinate boundaries are not respected.
-        if (error) 
+        if (status.error) 
         {
-            ImGui::Begin("error");
-            ImGui::TextWrapped("Data not found or coordinate number is odd, data will be deleted.");
-            ImGui::End();
-            func.XYvett.erase(func.XYvett.begin(), func.XYvett.end());
+            window_manager.show_error_box();
         } 
-       
 
-       /*
-        ImGui::Begin("Results");
-        func.module_calc();
-
-        for (size_t i = 0; i < func.modules.size(); i++)
+        if (status.show_results)
         {
-            ImGui::Text("Modules of vectors:%f\n", func.modules[i]);
-            ImGui::NextColumn();
+            window_manager.show_results_box();
         }
 
-        ImGui::End(); 
-        func.XYvett.erase(func.XYvett.begin(), func.XYvett.end());
-              */
+        if (status.reset_vector)
+        {
+            func.XYvett.erase(func.XYvett.begin(), func.XYvett.end());
+            status.reset_vector = !status.reset_vector;
+        }
+       
+
         // Rendering
     ImGui::Render();
     int display_w, display_h;
@@ -193,20 +161,3 @@ int main(void)
     return 0;
         
 }
-
-
-	/*
-	graphics graph; switcher swi; modulefunc modul; memory mem; angle ang; vett_product vett;
-	
-	while (graph.choice <= 0 || graph.choice > 3)
-	{
-	   graph.interface();
-
-	   if (graph.choice != 0)
-	   {
-		swi.switchfunc(graph, modul, mem, ang, vett);
-	   } 
-	}
-		return 0;
-		*/
-

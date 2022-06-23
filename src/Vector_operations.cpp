@@ -1,11 +1,10 @@
 #include "Vector_operations.hh"
-using namespace std;
 
 void modulefunc::module_calc() 
 {
     for (size_t i = 0; i < XYvett.size()-1; i+=2) 
     { 
-        modules.push_back(sqrt((XYvett[i] * XYvett[i]) + (XYvett[i+1] * XYvett[i+1])));
+        module_store.push_back(sqrt((XYvett[i] * XYvett[i]) + (XYvett[i+1] * XYvett[i+1])));
     }
 } 
 
@@ -19,17 +18,16 @@ the atan is calculated on the initial vector coordinates.
  next 2 coordinates.
  */
 
-void angle::atan_calculation(modulefunc modul) 
+void angle::atan_calculation() 
 {    
-    for (size_t i = 0; i < modul.XYvett.size()-1; i+=2) 
+    for (size_t i = 0; i < XYvett.size()-1; i+=2) 
     {
-        atanvett.push_back(atan(modul.XYvett[i+1] / modul.XYvett[i])); 
+        atanvett.push_back(atan(XYvett[i+1] / XYvett[i])); 
     }    
     for (size_t i = 0; i < atanvett.size(); ++i)
     {
-         cout << "Atan of Vector " << i+1 << " " << atanvett[i] << endl;
-    }
-      
+         std::cout << "Atan of Vector " << i+1 << " " << atanvett[i] << std::endl;
+    }  
 }       
 
 /*we store the tetha result Obtained with all the vectors. it will be ONE tetha angle covering
@@ -47,7 +45,7 @@ void angle::tetha_angle()
             tetha = atanvett[i] - atanvett[i+1];
         } 
     }
-    cout << "Angle between first and last vector: " << tetha << endl;
+    std::cout << "Angle between first and last vector: " << tetha << std::endl;
 }
 
 /*###############################
@@ -56,38 +54,35 @@ Vector product section
   Calculating SIN, COS, vectorial product and vectorial scalar product.
 */
 
-
-void vett_product::muliply_modules(modulefunc modul) 
+void angle::muliply_modules() 
 {
-    for (size_t i = 0; i < modul.modules.size()-1; i+=2) 
+    for (size_t i = 0; i < module_store.size()-1; i+=2) 
     {
-        product_store = (modul.modules[i] * modul.modules[i+1]);                      
+        product_store = (module_store[i] * module_store[i+1]);                      
     }
-    cout << "Product of modules: " << product_store << endl;
+    std::cout << "Product of modules: " << product_store << std::endl;
 }  
                 
-void vett_product::cos_of_angle(angle ang) 
+void vett_product::cos_of_angle() 
 {
-    cosangle =  cos(ang.tetha);
-    cout << "COS angle: " << cosangle << endl;
+    cosangle =  cos(tetha);
+    std::cout << "COS angle: " << cosangle << std::endl;
 }   
 
-
-void vett_product::sin_of_angle(angle ang) 
+void vett_product::sin_of_angle() 
 {
-    sinangle =  sin(ang.tetha);
-    cout << "SIN Angle: " << sinangle << endl;
+    sinangle =  sin(tetha);
+    std::cout << "SIN Angle: " << sinangle << std::endl;
 }   
-
 
 void vett_product::vectorial_product() 
 {
     vector_product = product_store * cosangle;
-    cout << "Vectorial product of vectors: " << vector_product << endl;
+    std::cout << "Vectorial product of vectors: " << vector_product << std::endl;
 }
 
 void vett_product::vectorial_scalar() 
 {
     scalar_product = product_store * sinangle;
-    cout << "Scalar product of vectors: " << scalar_product << endl;
+    std::cout << "Scalar product of vectors: " << scalar_product << std::endl;
 }
