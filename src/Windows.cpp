@@ -46,7 +46,8 @@ void Windows::show_results_box()
     ImGui::Begin("Results");
     module_calc();
     //static i avoids that the values will be rescanned when imgui redraws for each frame.
-    for (static size_t i = 0; i < module_store.size(); i++)
+    static size_t i;
+    for (i = 0; i < module_store.size(); i++)
     {
         ImGui::Text("Modules of %lu vector:%f\n", i+1, module_store[i]);
         ImGui::NextColumn();
