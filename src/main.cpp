@@ -23,7 +23,6 @@
 #include "../imgui/imgui_impl_opengl3.h"
 #include <stdio.h>
 #include <iostream>
-#include "Vector_operations.hh"
 #include "Buttons.hh"
 #include "Windows.hh"
 
@@ -43,7 +42,13 @@ static void glfw_error_callback(int error, const char* description)
 
 int main(void)
 {
-    modulefunc func; angle atan; MainWindowButtons button; Windows window_manager; ButtonStatus status;
+    MainWindowButtons button; 
+    Windows window_manager;
+    bool show_input_box = false;
+    bool error = false;
+    bool reset_vector = false;
+    bool show_results = false; 
+
     // Setup window
     glfwSetErrorCallback(glfw_error_callback);
     if (!glfwInit())
@@ -107,35 +112,35 @@ int main(void)
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
-
+        //Buttons in the main imgui frame.
         button.Vector_operations_button = ImGui::Button("Vector Operations");
 
         //Draw the window in frames only when the button is clicked.
         if (ImGui::IsItemClicked(button.Vector_operations_button))
         {
-            status.show_input_box = !status.show_input_box;
+            show_input_box = !show_input_box;
         }
 
-        if (status.show_input_box)
+        if (show_input_box)
         {
-            window_manager.vector_operations_window(button, status);
+            window_manager.vector_operations_window(&error, &reset_vector, &show_results);
         }
 
         //Display error text if coordinate boundaries are not respected.
-        if (status.error) 
+        if (error) 
         {
             window_manager.show_error_box();
         } 
 
-        if (status.show_results)
+        if (show_results)
         {
             window_manager.show_results_box();
         }
-
-        if (status.reset_vector)
+        
+        if (reset_vector)
         {
-            func.XYvett.erase(func.XYvett.begin(), func.XYvett.end());
-            status.reset_vector = !status.reset_vector;
+            window_manager.clear_vector();
+            reset_vector = !reset_vector;
         }
        
 
@@ -149,7 +154,6 @@ int main(void)
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
     glfwSwapBuffers(window);
-   
     }
         
     // Cleanup
