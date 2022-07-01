@@ -1,16 +1,15 @@
 #include <iostream>
-#include <array>
 #include "../imgui/imgui.h"
 #include "Windows.hh"
 
 /*Vector window with it's buttons inside, the checks on the buttons will be done on the same window*/
-void Windows::vector_operations_window(bool *error, bool *reset_vector, bool *show_results)
+void Windows::vector_operations_window(bool *error, bool *reset_vector, bool *show_results, vector_operations *operations)
 {
     //window name + text + input for numbers. Each begin represents a new window buffer
     //everything declarated below that buffer goes into that window. NOTE that the order of declaration for the buttons matters!
-    ImGui::Begin("Coordinates input, insert at least a even number of coords");  
-    ImGui::InputDouble("input", &XYcoord, 0.0, 0.0, "%f", 0);
-    ImGui::Text("Inputs inserted: %lu\n", XYvett.size()); 
+    ImGui::Begin("Coordinates input, insert at least a even number of coords >= 4");  
+    ImGui::InputDouble("input", &operations->XYcoord, 0.0, 0.0, "%f", 0);
+    ImGui::Text("Inputs inserted: %lu\n", operations->XYvett.size()); 
 
      if (ImGui::IsItemClicked(ImGui::Button("Reset")))
     {
@@ -19,17 +18,18 @@ void Windows::vector_operations_window(bool *error, bool *reset_vector, bool *sh
 
     if (ImGui::IsKeyPressed(ImGuiKey_Enter))
     {
-        XYvett.push_back(XYcoord); 
+        operations->XYvett.push_back(operations->XYcoord); 
     }
     
     if (ImGui::IsItemClicked(ImGui::Button("Calculate")))
     {
-        if (XYvett.size()%2 == 0 && XYvett.size() >= 4)
+        if (operations->XYvett.size()%2 == 0 && operations->XYvett.size() >= 4)
         {
-            module_calc();
+            operations->module_calc();
+            operations->atan_calculation();
             *show_results = !*show_results;
         }
-        else if ((XYvett.size()%2 != 0) || (XYvett.size() < 4))
+        else if ((operations->XYvett.size()%2 != 0) || (operations->XYvett.size() < 4))
         {
             *error = !*error;
         }
@@ -46,27 +46,45 @@ void Windows::vector_operations_window(bool *error, bool *reset_vector, bool *sh
 void Windows::show_error_box()
 {
     ImGui::Begin("error");
-    ImGui::TextWrapped("Data not found or coordinate number is odd, data will be deleted.");
+    ImGui::TextWrapped("Data not found or coordinate number is odd or not 4.");
     ImGui::End();
 }
 
-void Windows::show_results_box()
+void Windows::show_results_box(vector_operations *operations)
 {
     ImGui::Begin("Results");
-    //static i avoids that the values will be rescanned when imgui redraws for each frame.
-    static char *buffer = (char*)malloc(sizeof(module_store));
+    char data[300];
+    static char *buffer = NULL;
 
-    for (size_t i = 0; i < module_store.size(); ++i)
+    if (buffer == NULL)
     {
-        snprintf(buffer, sizeof(buffer), "%.2f", module_store[i]);
-        ImGui::Text("Modules of %lu vector: %f\n", i+1, module_store[i]);
-        ImGui::NextColumn();
+        buffer = (char*)malloc(sizeof(char));
+
+        for (size_t i = 0; i < operations->module_store.size(); ++i)
+        {
+            snprintf(data, sizeof(data), "Module of %lu vector: %.2f\n", i+1, operations->module_store[i]);
+        }
+
+        for (size_t i = 0; i < operations->atanvett.size(); ++i)
+        {
+            snprintf(data, sizeof(data), "Atan of %.2lu vector: %.2f\n", i+1, operations->atanvett[i]);
+        }
+
+        snprintf(data, sizeof(data), "Tetha between first and last vector: %.2f\n"
+                                     "Product of vector modules: %.2f\n" "COS Angle: %.2f\n"
+                                     "SIN Angle: %.2f\n" "Vectorial Product: %.2f\n"
+                                     "Scalar Product: %.2f\n", operations->tetha_angle(), operations->muliply_modules(),
+                                          operations->cos_of_angle(), operations->sin_of_angle(), operations->vectorial_product(),
+                                          operations->scalar_product());
+        *buffer = *data;
+
+        ImGui::TextWrapped("%s", buffer);
     }
 
     ImGui::End(); 
 }
 
-void Windows::clear_vector()
+void Windows::clear_vector(vector_operations *operations)
 {
-    XYvett.erase(XYvett.begin(), XYvett.end());
+    operations->XYvett.erase(operations->XYvett.begin(), operations->XYvett.end());
 }

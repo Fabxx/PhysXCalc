@@ -41,7 +41,7 @@ static void glfw_error_callback(int error, const char* description)
 
 int main(void)
 {
-    Windows window_manager;
+    Windows window_manager; vector_operations operations;
     bool show_input_box = false;
     bool error = false;
     bool reset_vector = false;
@@ -121,7 +121,7 @@ int main(void)
 
         if (show_input_box)
         {
-            window_manager.vector_operations_window(&error, &reset_vector, &show_results);
+            window_manager.vector_operations_window(&error, &reset_vector, &show_results, &operations);
         }
 
         //Display error text if coordinate boundaries are not respected.
@@ -132,12 +132,12 @@ int main(void)
 
         if (show_results)
         {
-            window_manager.show_results_box();
+            window_manager.show_results_box(&operations);
         }
         
         if (reset_vector)
         {
-            window_manager.clear_vector();
+            window_manager.clear_vector(&operations);
             reset_vector = !reset_vector;
         }
         ImGui::EndMainMenuBar();

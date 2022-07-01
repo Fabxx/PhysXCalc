@@ -4,40 +4,29 @@
 #include <math.h>
 #include <vector>
 
-class modulefunc {
+class vector_operations {
         
     public:
              std::vector<double_t> XYvett;
              std::vector<double_t> module_store;
+             std::vector<double_t> atanvett;
+             double_t tetha;
+             double_t product_store;
+             double_t vector_product_out;
+             double_t scalar_product_out;
+             double_t sinangle;
+             double_t cosangle;
              double_t XYcoord;
-             bool operation = false;
+
              
-             bool coordinates_input();
-             void module_calc();
-};
-
-class angle : public modulefunc { 
-        
-    public:
-              double_t tetha;
-              double_t product_store;
-              std::vector<double_t> atanvett;
-              void atan_calculation();
-              void tetha_angle();
-              void muliply_modules();
-};
-
-class vett_product : public angle {
-    private:
-             double_t vector_product;
-             double_t scalar_product;
-    public:
-                 double_t sinangle;
-                 double_t cosangle;
-                
-             void cos_of_angle();
-             void vectorial_product();
-             void vectorial_scalar();
-             void sin_of_angle();
-};
+            bool coordinates_input();
+            void module_calc();
+            void atan_calculation();
+            double_t tetha_angle();
+            double_t muliply_modules();
+            double_t cos_of_angle();
+            double_t vectorial_product();
+            double_t scalar_product();
+            double_t sin_of_angle();
+};        
 #endif /* E9AEFDD1_00F8_4C11_84C5_C1D6EB27AC5E */
