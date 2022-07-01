@@ -56,10 +56,10 @@ void Windows::show_results_box(vector_operations *operations)
             ImGui::NextColumn();
         }
         
-        ImGui::Text("Tetha between first and last vector: %.2f\n"
-                    "Product of vector modules: %.2f\n" "COS Angle: %.2f\n"
-                    "SIN Angle: %.2f\n" "Vectorial Product: %.2f\n"
-                    "Scalar Product: %.2f\n", operations->tetha_angle(), operations->muliply_modules(),
+        ImGui::Text("\nTetha between first and last vector: %.2f\n"
+                    "\nProduct of vector modules: %.2f\n" "COS Angle: %.2f\n"
+                    "\nSIN Angle: %.2f\n" "Vectorial Product: %.2f\n"
+                    "\nScalar Product: %.2f", operations->tetha_angle(), operations->muliply_modules(),
                                               operations->cos_of_angle(), operations->sin_of_angle(), 
                                               operations->vectorial_product(), operations->scalar_product()); 
                                                                
@@ -70,4 +70,5 @@ void Windows::show_results_box(vector_operations *operations)
 void Windows::clear_vector(vector_operations *operations)
 {
     operations->XYvett.erase(operations->XYvett.begin(), operations->XYvett.end());
+    operations->module_store.erase(operations->module_store.begin(), operations->module_store.end());
 }
