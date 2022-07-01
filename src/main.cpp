@@ -23,7 +23,6 @@
 #include "../imgui/imgui_impl_opengl3.h"
 #include <stdio.h>
 #include <iostream>
-#include "Buttons.hh"
 #include "Windows.hh"
 
 #if defined(IMGUI_IMPL_OPENGL_ES2)
@@ -42,7 +41,6 @@ static void glfw_error_callback(int error, const char* description)
 
 int main(void)
 {
-    MainWindowButtons button; 
     Windows window_manager;
     bool show_input_box = false;
     bool error = false;
@@ -113,10 +111,10 @@ int main(void)
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
         //Buttons in the main imgui frame.
-        button.Vector_operations_button = ImGui::Button("Vector Operations");
+        ImGui::BeginMainMenuBar();
 
         //Draw the window in frames only when the button is clicked.
-        if (ImGui::IsItemClicked(button.Vector_operations_button))
+        if (ImGui::IsItemClicked(ImGui::MenuItem("Vector Operations", NULL, false, true)))
         {
             show_input_box = !show_input_box;
         }
@@ -142,6 +140,7 @@ int main(void)
             window_manager.clear_vector();
             reset_vector = !reset_vector;
         }
+        ImGui::EndMainMenuBar();
        
 
         // Rendering
