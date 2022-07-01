@@ -18,8 +18,6 @@ class vector_operations {
              double_t cosangle;
              double_t XYcoord;
 
-             
-            bool coordinates_input();
             void module_calc();
             void atan_calculation();
             double_t tetha_angle();

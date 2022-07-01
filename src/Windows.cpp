@@ -14,6 +14,7 @@ void Windows::vector_operations_window(bool *error, bool *reset_vector, bool *sh
      if (ImGui::IsItemClicked(ImGui::Button("Reset")))
     {
         *reset_vector = !*reset_vector;
+        *show_results = false;
     }
 
     if (ImGui::IsKeyPressed(ImGuiKey_Enter))
@@ -35,11 +36,6 @@ void Windows::vector_operations_window(bool *error, bool *reset_vector, bool *sh
         }
     } 
 
-    if (ImGui::IsItemClicked(ImGui::Button("Close Results")))
-    {
-        *show_results = false;
-    }
-
     ImGui::End();
 }
 
@@ -53,33 +49,20 @@ void Windows::show_error_box()
 void Windows::show_results_box(vector_operations *operations)
 {
     ImGui::Begin("Results");
-    char data[300];
-    static char *buffer = NULL;
-
-    if (buffer == NULL)
-    {
-        buffer = (char*)malloc(sizeof(char));
 
         for (size_t i = 0; i < operations->module_store.size(); ++i)
         {
-            snprintf(data, sizeof(data), "Module of %lu vector: %.2f\n", i+1, operations->module_store[i]);
+            ImGui::Text("Module of %lu vector: %.2f\n", i+1, operations->module_store[i]);
+            ImGui::NextColumn();
         }
-
-        for (size_t i = 0; i < operations->atanvett.size(); ++i)
-        {
-            snprintf(data, sizeof(data), "Atan of %.2lu vector: %.2f\n", i+1, operations->atanvett[i]);
-        }
-
-        snprintf(data, sizeof(data), "Tetha between first and last vector: %.2f\n"
-                                     "Product of vector modules: %.2f\n" "COS Angle: %.2f\n"
-                                     "SIN Angle: %.2f\n" "Vectorial Product: %.2f\n"
-                                     "Scalar Product: %.2f\n", operations->tetha_angle(), operations->muliply_modules(),
-                                          operations->cos_of_angle(), operations->sin_of_angle(), operations->vectorial_product(),
-                                          operations->scalar_product());
-        *buffer = *data;
-
-        ImGui::TextWrapped("%s", buffer);
-    }
+        
+        ImGui::Text("Tetha between first and last vector: %.2f\n"
+                    "Product of vector modules: %.2f\n" "COS Angle: %.2f\n"
+                    "SIN Angle: %.2f\n" "Vectorial Product: %.2f\n"
+                    "Scalar Product: %.2f\n", operations->tetha_angle(), operations->muliply_modules(),
+                                              operations->cos_of_angle(), operations->sin_of_angle(), 
+                                              operations->vectorial_product(), operations->scalar_product()); 
+                                                               
 
     ImGui::End(); 
 }
